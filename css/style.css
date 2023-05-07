@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+width: 100vw;
+height: 100vh;
+padding: 40px 0px;
+background-color: #dfe6e9;
+display: grid;
+place-items: center;
+}
+.container
+{
+width: 700px;
+display: flex;
+
+user-select: none;
+min-height: 450px;
+background-color: #fff;
+box-shadow: rgba(0, 0, 0, 0.756) 2px 1px 1px 2px;
+
+}
+.ledger{
+    background-color: rgb(0, 55, 252);
+    /* padding: 20px; */
+    padding: 0px 20px;
+    
+    flex: 1;
+    color: white;
+}
+.ledger h2, .ledger h4, .ledger h1{
+    font-weight:500;
+    margin-bottom:5px ;
+    padding: 5px;
+}
+.ledger h2 {
+    text-transform:capitalize;
+    margin-top: 5px;
+}
+
+.inc-exp-container{
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+}
+
+.inc-exp-container
+div{
+
+  text-align: center;  
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 18px;
+}
+.inc-exp-container
+div{font-size: 22px;}
+.inc-exp-container
+div.inc{
+color: rgb(255, 255, 255);
+border: 2px solid rgb(94, 255, 0);
+}
+.inc-exp-container
+div.exp{
+    color: rgb(255, 255, 255);
+    border: 2px solid darkred;
+
+}
+#form{
+    padding: 5px;
+    margin-top: 20px;
+
+}
+.form-control{
+    margin-top: 10px;
+}
+label  {
+    display: inline-block;
+    margin: 10px 0 ;
+    font-size: 18px;
+    font-weight: 400;
+}
+input[type="text"],
+input[type="number"]
+{
+    border: #dfe6e9 1px solid;
+display: block;
+width: 100%;
+font-size: 16px;
+padding: 10px;
+border: none;
+outline: none;
+border-radius: 5px;
+
+}
+.btn{
+    background-color:rgb(14, 241, 14);
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: rgb(45, 28, 28);
+    display: block;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+.transaction{
+
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.transaction h3{
+    text-transform: capitalize;
+    padding-bottom: 10px;
+border-bottom: 3px solid #f1f1f1;
+}
+.trans {
+    list-style-type: none;
+
+
+}
+.transaction .trans li{
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.trans li.inc{
+    color: green;
+}
+.trans li.exp{
+    color: red;
+}
+
+.btn-del
+{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: red;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+@media (max-width:900px)
+{
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .inc-exp-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        gap: 10px;
+    }
+}
